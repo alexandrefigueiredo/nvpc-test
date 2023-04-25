@@ -1,0 +1,58 @@
+.repos {
+	&Container {
+		width: 100%;
+	}
+
+	&Filters {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin: 2rem 0;
+
+		.searchBar {
+			flex-basis: 30%;
+			padding: 1rem;
+
+			color: var(--white);
+			background-color: transparent;
+			border-radius: 8px;
+			border: 1px solid var(--gray-blue-300);
+		}
+
+		.select {
+			flex-basis: 10%;
+			padding: 1rem;
+
+			color: var(--white);
+			background-color: transparent;
+			border-radius: 8px;
+			border: 1px solid var(--gray-blue-300);
+		}
+	}
+
+	&FilterWrapper {
+		display: flex;
+		padding: 1rem;
+		gap: 5px;
+
+		background-color: var(--gray-blue-700);
+		border-radius: 8px;
+	}
+
+	&Content {
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 30rem);
+		overflow-y: scroll;
+		gap: 2rem;
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			background-color: var(--gray-blue-300);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--gray-blue-100);
+		}
+	}
+}

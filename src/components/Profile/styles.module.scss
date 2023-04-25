@@ -1,0 +1,57 @@
+.profile {
+	&Container {
+		width: 100%;
+	}
+
+	&Content {
+		display: flex;
+		margin-top: 2rem;
+		padding: 2rem;
+		background-color: var(--gray-blue-700);
+		border-radius: 10px;
+		gap: 2rem;
+
+		img {
+			width: 148px;
+			height: 148px;
+			border-radius: 8px;
+		}
+	}
+
+	&Information {
+		strong {
+			color: var(--gray-blue-100);
+			font-size: 1.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 8px;
+
+			a {
+				display: flex;
+				align-items: center;
+				font-size: 0.75rem;
+				color: var(--blue-500);
+				text-decoration: none;
+				gap: 0.5rem;
+			}
+		}
+
+		p {
+			margin-bottom: 24px;
+		}
+	}
+
+	&SocialMedias {
+		display: flex;
+		gap: 2rem;
+
+		span {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--gray-blue-300);
+		}
+	}
+}
