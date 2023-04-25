@@ -12,6 +12,8 @@ export default function Document() {
 				/>
 
 				<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+				<title>NVPC - Challenge</title>
 			</Head>
 			<body>
 				<Main />

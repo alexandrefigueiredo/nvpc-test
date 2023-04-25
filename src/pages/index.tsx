@@ -4,7 +4,6 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]";
 import { getRepos, getUser, getUsername } from "../clients/Github";
 import { getUserId } from "../utils/getUserId";
-import { Head } from "next/document";
 import { Repo, User } from "../clients/Github/types";
 import { Profile } from "../components/Profile";
 
@@ -18,9 +17,6 @@ interface HomeProps {
 export default function Home({ user, repos }: HomeProps) {
 	return (
 		<>
-			<Head>
-				<title>NVPC - Challenge</title>
-			</Head>
 			<main className={styles.contentContainer}>
 				<Profile user={user} />
 				<ReposList repos={repos} />
