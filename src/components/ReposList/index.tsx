@@ -37,9 +37,9 @@ export function ReposList({ repos }: ReposListProps) {
 
 	const sortedReposList = useMemo(() => {
 		if (sortBy === "alphabetical") {
-			const sortedRepos = reposList.sort(function (firstRepo, secondRepo) {
-				const firstRepoName = firstRepo.name.toLowerCase(); // ignore upper and lowercase
-				const secondRepoName = secondRepo.name.toLowerCase(); // ignore upper and lowercase
+			reposList.sort(function (firstRepo, secondRepo) {
+				const firstRepoName = firstRepo.name.toLowerCase();
+				const secondRepoName = secondRepo.name.toLowerCase();
 				if (firstRepoName < secondRepoName) {
 					return -1;
 				}
@@ -52,7 +52,7 @@ export function ReposList({ repos }: ReposListProps) {
 		}
 
 		if (sortBy === "lastCommit") {
-			const sortedRepos = reposList.sort(function (firstRepo, secondRepo) {
+			reposList.sort(function (firstRepo, secondRepo) {
 				const firstRepoLastCommit = new Date(firstRepo.updated_at);
 				const secondRepoLastCommit = new Date(secondRepo.updated_at);
 
@@ -63,12 +63,10 @@ export function ReposList({ repos }: ReposListProps) {
 		return reposList;
 	}, [reposList, sortBy]);
 
-	function sortReposList() {}
-
 	const filterReposList = () => {
 		const filteredReposList = repos.filter(
 			(repo) =>
-				repo.name.includes(filters.search) &&
+				repo.name.toLowerCase().includes(filters.search.toLowerCase()) &&
 				repo.has_issues === filters.hasIssues &&
 				repo.has_pages === filters.hasPages &&
 				repo.archived === filters.isArchived
