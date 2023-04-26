@@ -136,11 +136,16 @@ export function ReposList({ repos }: ReposListProps) {
 					/>
 				</div>
 			</div>
-			<div className={styles.reposContent}>
-				{sortedReposList.map((repo) => {
-					return <RepoCard repo={repo} key={repo.id} />;
-				})}
-			</div>
+			{sortedReposList.length > 0 && (
+				<div className={styles.reposContent}>
+					{sortedReposList.map((repo) => {
+						return <RepoCard repo={repo} key={repo.id} />;
+					})}
+				</div>
+			)}
+			{sortedReposList.length <= 0 && (
+				<span>No repositories were found with these filters. :(</span>
+			)}
 		</div>
 	);
 }
