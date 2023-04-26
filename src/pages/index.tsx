@@ -16,12 +16,10 @@ interface HomeProps {
 
 export default function Home({ user, repos }: HomeProps) {
 	return (
-		<>
-			<main className={styles.contentContainer}>
-				<Profile user={user} />
-				<ReposList repos={repos} />
-			</main>
-		</>
+		<main className={styles.contentContainer}>
+			<Profile user={user} />
+			<ReposList repos={repos} />
+		</main>
 	);
 }
 

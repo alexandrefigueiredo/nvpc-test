@@ -10,7 +10,7 @@ export function Profile({ user }: ProfileProps) {
 	return (
 		<div className={styles.profileContainer}>
 			<div className={styles.profileContent}>
-				<img src={user.avatar_url} alt="" />
+				<img src={user.avatar_url} alt="Profile picture" />
 				<div className={styles.profileInformation}>
 					<strong>
 						{user.name}
