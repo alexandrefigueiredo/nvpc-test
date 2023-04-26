@@ -11,6 +11,10 @@
 		border-radius: 10px;
 		gap: 2rem;
 
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+
 		img {
 			width: 148px;
 			height: 148px;
@@ -44,7 +48,12 @@
 
 	&SocialMedias {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 2rem;
+
+		@media (max-width: 768px) {
+			gap: 10px;
+		}
 
 		span {
 			display: flex;

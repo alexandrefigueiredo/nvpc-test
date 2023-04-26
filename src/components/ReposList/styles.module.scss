@@ -9,9 +9,17 @@
 		gap: 1.5rem;
 		margin: 2rem 0;
 
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+
 		.searchBar {
 			flex-basis: 30%;
 			padding: 1rem;
+
+			@media (max-width: 768px) {
+				flex-basis: 100%;
+			}
 
 			color: var(--white);
 			background-color: transparent;
@@ -22,6 +30,10 @@
 		.select {
 			flex-basis: 10%;
 			padding: 1rem;
+
+			@media (max-width: 768px) {
+				flex-basis: 100%;
+			}
 
 			color: var(--white);
 			background-color: transparent;
@@ -42,6 +54,11 @@
 
 		background-color: var(--gray-blue-700);
 		border-radius: 8px;
+
+		@media (max-width: 768px) {
+			padding: 0;
+			background-color: transparent;
+		}
 	}
 
 	&Content {
@@ -58,6 +75,11 @@
 
 		&::-webkit-scrollbar-thumb {
 			background-color: var(--gray-blue-100);
+		}
+
+		@media (max-width: 768px) {
+			height: unset;
+			overflow-y: visible;
 		}
 	}
 }
