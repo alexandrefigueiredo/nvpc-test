@@ -27,6 +27,11 @@
 			background-color: transparent;
 			border-radius: 8px;
 			border: 1px solid var(--gray-blue-300);
+
+			option {
+				color: var(--white);
+				background-color: var(--gray-blue-700);
+			}
 		}
 	}
 
