@@ -13,7 +13,7 @@ export function RepoCard({ repo }: RepoCardProps) {
 			{!!repo.description && <p>{repo.description}</p>}
 			<p>{repo.language}</p>
 			<span>
-				Updated at:{" "}
+				Last commit:{" "}
 				{new Intl.DateTimeFormat("pt-br").format(new Date(repo.updated_at))}
 			</span>
 		</div>
