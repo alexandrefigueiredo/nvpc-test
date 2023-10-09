@@ -24,7 +24,7 @@ export default function Home({ user, repos }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-	let username = "alexandrefigueiredo";
+	let username = "heitorfig";
 
 	const session = await getServerSession(req, res, authOptions);
 	if (session) {
